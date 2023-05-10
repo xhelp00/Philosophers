@@ -6,7 +6,7 @@
 #    By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 17:20:39 by phelebra          #+#    #+#              #
-#    Updated: 2023/05/10 08:04:01 by phelebra         ###   ########.fr        #
+#    Updated: 2023/05/10 08:20:44 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ OBJ_BONUS = obj/utils.o obj/bonus.o obj/utils_bonus.o
 LIBFT = obj/libft/libft.o
 LIBFT_DIR = src/libft
 NAME_H = include/philo.h
+NAME_H_BONUS = include/philo_bonus.h
 
 all: $(NAME) 
 
@@ -48,7 +49,7 @@ $(NAME): $(LIBFT) $(OBJ) $(NAME_H)
 obj/%.o: src/%.c
 	$(CC) -g -Wall -Wextra -Werror -c $< -o $@
 
-$(BONUS): $(LIBFT) $(OBJ_BONUS) $(NAME_H) 
+$(BONUS): $(LIBFT) $(OBJ_BONUS) $(NAME_H_BONUS) 
 	$(CC) $(OBJ_BONUS) $(LIBFT) -o $(BONUS)
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣶⣶⣶⣶⣶⠖⠀⠀⢠⣶⣶⣶⣶⣶⣶⡶⣶⣶⣶⣶⣶⣶⣶⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢸⣿⣿⣿⣿⡿⠋⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
