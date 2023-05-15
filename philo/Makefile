@@ -6,7 +6,7 @@
 #    By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 17:20:39 by phelebra          #+#    #+#              #
-#    Updated: 2023/05/10 08:20:44 by phelebra         ###   ########.fr        #
+#    Updated: 2023/05/15 14:59:57 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,15 +20,13 @@ GREEN	:= \033[32;1m
 RESET	:= \033[0m
 OBJ = obj/main.o obj/utils.o
 OBJ_BONUS = obj/utils.o obj/bonus.o obj/utils_bonus.o
-LIBFT = obj/libft/libft.o
-LIBFT_DIR = src/libft
 NAME_H = include/philo.h
 NAME_H_BONUS = include/philo_bonus.h
 
 all: $(NAME) 
 
-$(NAME): $(LIBFT) $(OBJ) $(NAME_H) 
-	$(CC) $(OBJ) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJ) $(NAME_H) 
+	$(CC) $(OBJ) -o $(NAME)
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣶⣶⣶⣶⣶⠖⠀⠀⢠⣶⣶⣶⣶⣶⣶⡶⣶⣶⣶⣶⣶⣶⣶⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢸⣿⣿⣿⣿⡿⠋⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⢘⣿⣿⡿⠋⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
@@ -49,8 +47,8 @@ $(NAME): $(LIBFT) $(OBJ) $(NAME_H)
 obj/%.o: src/%.c
 	$(CC) -g -Wall -Wextra -Werror -c $< -o $@
 
-$(BONUS): $(LIBFT) $(OBJ_BONUS) $(NAME_H_BONUS) 
-	$(CC) $(OBJ_BONUS) $(LIBFT) -o $(BONUS)
+$(BONUS): $(OBJ_BONUS) $(NAME_H_BONUS) 
+	$(CC) $(OBJ_BONUS) -o $(BONUS)
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣶⣶⣶⣶⣶⠖⠀⠀⢠⣶⣶⣶⣶⣶⣶⡶⣶⣶⣶⣶⣶⣶⣶⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢸⣿⣿⣿⣿⡿⠋⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⢘⣿⣿⡿⠋⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
@@ -68,22 +66,11 @@ $(BONUS): $(LIBFT) $(OBJ_BONUS) $(NAME_H_BONUS)
 	@echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 	@echo "$(RED)$(BOLD)Runable philo_bonus created.$(RESET)"
 
-$(LIBFT): $(LIBFT_DIR)/*.c
-	@if  [ ! -d obj/libft ]; then \
-		mkdir -p obj/libft; \
-	fi
-	@make -C $(LIBFT_DIR)
-	@echo "$(RED)$(BOLD)Libft compiled.$(RESET)"
-	@cp $(LIBFT_DIR)/libft.a $(LIBFT)
-	@echo "$(RED)$(BOLD)Library created.$(RESET)"
-	@make fclean -C $(LIBFT_DIR)
-	@echo "$(RED)$(BOLD)Library objects cleanup.$(RESET)"
-
 bonus: $(BONUS)
 
 clean:
 	@echo "$(RED)Cleaning object files...$(RESET)"
-	@$(RM) $(OBJ) $(OBJ_M) $(OBJ_BONUS) $(LIBFT)
+	@$(RM) $(OBJ) $(OBJ_M) $(OBJ_BONUS)
 
 fclean: clean
 	@echo "$(RED)Cleaning...$(RESET)"
