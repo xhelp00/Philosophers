@@ -17,3 +17,7 @@ usleep, gettimeofday, pthread_create,
 pthread_detach, pthread_join, pthread_mutex_init,
 pthread_mutex_destroy, pthread_mutex_lock,
 pthread_mutex_unlock
+
+## Study
+-pthread needs to be added as link option to cc
+-pthread_join function is kind of "wait" for threads
