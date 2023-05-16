@@ -21,3 +21,6 @@ pthread_mutex_unlock
 ## Study
 -pthread needs to be added as link option to cc
 -pthread_join function is kind of "wait" for threads
+
+## LL
+- executable files compiled on Linux are failing to run on Mac (zsh: exec format error:)
