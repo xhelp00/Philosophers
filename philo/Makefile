@@ -6,7 +6,7 @@
 #    By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 17:20:39 by phelebra          #+#    #+#              #
-#    Updated: 2023/05/16 14:39:34 by phelebra         ###   ########.fr        #
+#    Updated: 2023/05/16 16:35:15 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,22 +45,22 @@ $(NAME): $(OBJ) $(NAME_H)
 	@echo "                               / \\"
 	@echo "                              / .'_"
 	@echo "                             / __| \\"
-	@echo "             \`.             | / |-' |"
+	@echo "             \`.             | / |-' )"
 	@echo "           \`.  \\_..._       :  |_,-/"
 	@echo "         \`-. \`,'     \`-.   /\`-.__,'"
 	@echo "            \`/ __       \\ /     /"
 	@echo "            /\`/  \\       :'    /"
 	@echo "          _,\\o\\_o/       /    /"
-	@echo "         |_| ___.--.    /    /"
+	@echo "         (_) ___.--.    /    /"
 	@echo "          \`-. -._.i \\.      :"
-	@echo "             \`.\\  | |:.     |"
+	@echo "             \`.\\  ) |:.     |"
 	@echo "            ,' |\`-' |:..   / \\"
 	@echo "   __     ,'   |    \`.:.      \`."
-	@echo "  |_ \`---:     |      \\:.       \\"
-	@echo "   ,'     \`. .'\\       \\:.       |"
-	@echo " ,' ,'     ,'  \\ o    |:.      /"
-	@echo "|_,'  ,7  /     \\\`.__.':..     /,,,"
-	@echo "  |_,'|_,'   _gdMbp,,dp,,,,,,dMMMMMbp,,"
+	@echo "  (_ \`---:     |      \\:.       \\"
+	@echo "   ,'     \`. .'\\       \\:.       )"
+	@echo " ,' ,'     ,'   \\ o    |:.      /"
+	@echo "(_,'  ,7  /      \\\`.__.':..    /,,,"
+	@echo "  (_,'(_,'   _gdMbp,,dp,,,,,,dMMMMMbp,,"
 	@echo "          ,dMMMMMMMMMMMMMMMMMMMMMMMMMMMb,"
 	@echo "       .dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMb,"
 	@echo "     .dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,"
