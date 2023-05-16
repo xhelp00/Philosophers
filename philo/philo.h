@@ -6,7 +6,7 @@
 /*   By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/16 13:52:18 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/16 14:58:55 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ typedef struct s_philo
 	struct timeval	t_created;
 	struct timeval	t_lastmeal;
 	pthread_t		thread;
-	pthread_mutex_t	*mutexes;
-	pthread_mutex_t	*megaphone;
+	pthread_mutex_t	*mx_vidle;
+	pthread_mutex_t	*mx_out;
 }				t_philo;
 
 #endif
