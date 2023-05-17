@@ -19,6 +19,7 @@ pthread_mutex_destroy, pthread_mutex_lock,
 pthread_mutex_unlock
 
 ## Study
+great playlist about Threads https://www.youtube.com/playlist?list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2
 -pthread needs to be added as link option to cc
 -pthread_join function is kind of "wait" for threads
 
