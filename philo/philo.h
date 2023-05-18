@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/17 12:47:03 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:37:20 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,12 @@ typedef struct s_plato
 	pthread_mutex_t	*mx_vidle;
 	pthread_mutex_t	*mx_out;
 }				t_plato;
+
+/* TIMER */
+void	start_action(int duration);
+
+/* UTILS */
+void	init_plato(int ac, char **av, t_plato **platos, 
+					pthread_mutex_t	**mx_vidle);
 
 #endif
