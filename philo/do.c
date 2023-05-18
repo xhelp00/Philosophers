@@ -6,12 +6,11 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:19:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 17:00:02 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:01:09 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
 
 void	do_sleep(t_plato **plato)
 {

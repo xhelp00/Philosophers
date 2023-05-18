@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:51:40 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:53:34 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:01:33 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	alone(t_plato **plato)
 {
 	start_action((*plato)->die);
-	printf("%-8d %-4s %-5s\n", (*plato)->die, "1","\033[1;31mhas died\033[0m");
+	printf("%-8d %-4s %-5s\n", (*plato)->die, "1", "\033[1;31mhas died\033[0m");
 	free((*plato)->mx_vidle);
 	free((*plato)->mx_out);
 	free((*plato)->alive);
