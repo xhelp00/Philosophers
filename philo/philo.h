@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/16 14:58:55 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:47:03 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_philo
+typedef struct s_plato
 {
 	int				id;
 	int				eat;
 	int				die;
 	int				nap;
-	int				to_eat;
-	int				n_phil;
-	int				n_ate;
+	int				goal;
+	int				num;
+	int				snacks;
 	int				*alive;
 	int				init_sleep;
 	int				*forks;
@@ -36,6 +36,6 @@ typedef struct s_philo
 	pthread_t		thread;
 	pthread_mutex_t	*mx_vidle;
 	pthread_mutex_t	*mx_out;
-}				t_philo;
+}				t_plato;
 
 #endif
