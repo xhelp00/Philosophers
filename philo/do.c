@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:19:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:48:08 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:00:02 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	taken(t_plato **plato)
 	gettimeofday(&now, NULL);
 	pthread_mutex_lock((*plato)->mx_out);
 	if ((*plato)->alive[0])
-		printf("%-8lu %-3d \e[0;33m took a fork\e[0m\n",
+		printf("%-8lu %-3d \033[0;33m took a fork\033[0m\n",
 			timesince((*plato)->t_created, now), (*plato)->id + 1);
 	pthread_mutex_unlock((*plato)->mx_out);
 }
