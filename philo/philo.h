@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:37:20 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:43:45 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,12 @@ typedef struct s_plato
 }				t_plato;
 
 /* TIMER */
-void	start_action(int duration);
+void				start_action(int duration);
 
 /* UTILS */
-void	init_plato(int ac, char **av, t_plato **platos, 
-					pthread_mutex_t	**mx_vidle);
+unsigned long		timesince(struct timeval then, struct timeval now);
+int					ft_atoi(const char *str);
+void				init_plato(int ac, char **av, t_plato **platos,
+						pthread_mutex_t	**mx_vidle);
 
 #endif

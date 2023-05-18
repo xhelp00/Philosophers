@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:52:16 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:31:17 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:44:53 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	gettime(void)
 {
-	int		ms;
+	int				ms;
 	struct timeval	tv;
 
 	gettimeofday(&tv, NULL);
