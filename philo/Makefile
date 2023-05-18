@@ -6,7 +6,7 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 17:20:39 by phelebra          #+#    #+#              #
-#    Updated: 2023/05/18 13:39:02 by phelebra         ###   ########.fr        #
+#    Updated: 2023/05/18 16:48:49 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ BOLD	:= \033[1m
 RED		:= \033[31;1m
 GREEN	:= \033[32;1m
 RESET	:= \033[0m
-OBJ = obj/main.o obj/utils.o obj/do.o
+OBJ = obj/main.o obj/utils.o obj/do.o obj/timer.o
 NAME_H = philo.h
 
 all: $(NAME) 

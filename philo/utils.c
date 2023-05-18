@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:51:28 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:37:22 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:54:54 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ unsigned long	timesince(struct timeval then, struct timeval now)
 	unsigned long	start;
 	unsigned long	end;
 
-	start = (then.tv_sec * 1000) + round(then.tv_usec / 1000);
-	end = (now.tv_sec * 1000) + round(now.tv_usec / 1000);
+	start = (then.tv_sec * 1000) + (then.tv_usec / 1000);
+	end = (now.tv_sec * 1000) + (now.tv_usec / 1000);
 	return (end - start);
 }
 

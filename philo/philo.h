@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:43:45 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:53:16 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,12 @@ unsigned long		timesince(struct timeval then, struct timeval now);
 int					ft_atoi(const char *str);
 void				init_plato(int ac, char **av, t_plato **platos,
 						pthread_mutex_t	**mx_vidle);
+
+/* DO */
+void				do_sleep(t_plato **plato);
+int					do_eat(t_plato **plato);
+
+/* MAIN */
+int					is_alive(t_plato **plato);
 
 #endif
