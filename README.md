@@ -25,3 +25,4 @@ great playlist about Threads https://www.youtube.com/playlist?list=PLfqABt5AS4Fm
 - executable files compiled on Linux are failing to run on Mac (zsh: exec format error:)
 - process can contain multiple threads
 - all threads can access all variables - they have common address in memory
+- avoid using usleep directly with amount of time needed for activity as usleep is not very precise and the problem grows bigger with bigger numbers
