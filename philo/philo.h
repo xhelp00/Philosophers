@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
+/*   By: phelebra <phelebra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 07:52:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/05/18 16:53:16 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:36:38 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 typedef struct s_plato
 {
+	pthread_mutex_t	*mx_vidle;
+	pthread_mutex_t	*mx_out;
 	int				id;
 	int				eat;
 	int				die;
@@ -34,8 +36,6 @@ typedef struct s_plato
 	struct timeval	t_created;
 	struct timeval	t_lastmeal;
 	pthread_t		thread;
-	pthread_mutex_t	*mx_vidle;
-	pthread_mutex_t	*mx_out;
 }				t_plato;
 
 /* TIMER */
